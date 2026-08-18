@@ -1,22 +1,16 @@
-import "./App.css";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Navbar from "./components/Navbar";
-import Searchbar from "./components/Searchbar";
-import Result from "./components/Result";
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import ResultPage from './pages/Result';
+import PageNotFound from './pages/PageNotFound';
 
-export default function App() {
+function App() {
   return (
-    <>
-      <section>
-        <Navbar />
-        <Header />
-        <Searchbar />
-        <hr />
-        <Result />
-        <hr />
-        <Footer />
-      </section>
-    </>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/result" element={<ResultPage />} />
+        <Route path="*" element={<PageNotFound />} />
+      </Routes>
   );
 }
+
+export default App;
