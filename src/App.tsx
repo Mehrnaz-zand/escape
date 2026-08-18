@@ -1,34 +1,22 @@
 import "./App.css";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Navbar from "./components/Navbar";
+import Searchbar from "./components/Searchbar";
+import Result from "./components/Result";
 
-function App() {
+export default function App() {
   return (
     <>
       <section>
-        <div>
-          <h1>Escape</h1>
-          <hr />
-          <div>
-            <p>Where do you want to escape?</p>
-            <div className="search-bar">
-              <input
-                className="input"
-                type="text"
-                placeholder="Search destinations..."
-              />
-              <button 
-              className="button" onClick={() => alert("Search functionality not implemented yet.")}>
-                Search
-                </button>
-            </div>
-          </div>
-          <hr/>
-          <div className="results">
-            <p>Results will appear here.</p>
-          </div>
-        </div>
+        <Navbar />
+        <Header />
+        <Searchbar />
+        <hr />
+        <Result />
+        <hr />
+        <Footer />
       </section>
     </>
   );
 }
-
-export default App;
