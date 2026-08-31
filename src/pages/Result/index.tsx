@@ -12,9 +12,15 @@ const Result = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-500 to-blue-600">
-      <h1> Results</h1>
+    <div className="result-page">
+      <h1>Results</h1>
       <DestinationCard destination={destination} />
+      <p>Checkout more destinations!</p>
+      <div className="grid">
+        {destinations.slice(0, 4).map((item) => (
+          <DestinationCard key={item.id} destination={item} />
+        ))}
+      </div>
     </div>
   );
 };

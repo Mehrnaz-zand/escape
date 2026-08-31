@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { destinations } from "../data/destinations";
-import DestinationCard from "./DestinationCard";
 import type { Destination } from "../types/Destination";
 import { Link } from "react-router-dom";
 
@@ -40,9 +39,11 @@ const Searchbar = () => {
         <button className="button">Search</button>
         {destinationData ? (
           <div className="destination-results">
-            <DestinationCard destination={destinationData} />
+            <p>
+              {destinationData.name} - starting price: ${destinationData.price}
+            </p>
             <Link to={`/result/${destinationData.id}`}>
-              <button className="button">View Details</button>
+              <button className="button">View more</button>
             </Link>
           </div>
         ) : submitted && !destinationData ? (
