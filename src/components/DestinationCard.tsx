@@ -2,8 +2,8 @@ import type { Destination } from "../types/Destination";
 
 type Props = {
   destination: Destination;
+  showViewMore?: boolean;
 };
-
 const DestinationCard = (props: Props) => {
   return (
     <div className="destination-card">
@@ -25,6 +25,13 @@ const DestinationCard = (props: Props) => {
         alt={props.destination.name}
         className="img"
       />
+      {props.showViewMore && (
+        <div className="view-more">
+          <a href={`/result/${props.destination.id}`}>
+            <button className="button">View more</button>
+          </a>
+        </div>
+      )}
     </div>
   );
 };

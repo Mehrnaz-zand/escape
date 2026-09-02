@@ -1,6 +1,6 @@
 import type { Destination } from "../types/Destination";
 
-export const destinations: Destination[] = [
+const destinations: Destination[] = [
   {
     id: 1,
     name: "Paris",
@@ -111,3 +111,5 @@ export const destinations: Destination[] = [
     image: "https://images.unsplash.com/photo-1513622470522-26c3c8a854bc",
   },
 ];
+
+export default destinations;

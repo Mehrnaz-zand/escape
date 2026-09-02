@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { destinations } from "../data/destinations";
+import destinations from "../data/destinations";
 import type { Destination } from "../types/Destination";
 import { Link } from "react-router-dom";
 

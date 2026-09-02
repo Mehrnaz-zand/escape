@@ -1,5 +1,5 @@
 import DestinationCard from "../../components/DestinationCard";
-import { destinations } from "../../data/destinations";
+import destinations from "../../data/destinations";
 import { useParams } from "react-router-dom";
 
 const Result = () => {
@@ -18,9 +18,16 @@ const Result = () => {
       <p>Checkout more destinations!</p>
       <div className="grid">
         {destinations.slice(0, 4).map((item) => (
-          <DestinationCard key={item.id} destination={item} />
+          <DestinationCard
+            key={item.id}
+            destination={item}
+            showViewMore={true}
+          />
         ))}
       </div>
+      <button className="button" onClick={() => window.history.back()}>
+        Back
+      </button>
     </div>
   );
 };
