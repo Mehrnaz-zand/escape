@@ -15,7 +15,7 @@ const Searchbar = () => {
   const handleSearch = () => {
     const result = destinationList.find(
       (destination) =>
-        destination.name.toLowerCase() === searchInput.toLowerCase(),
+        destination.name.toLowerCase() === searchInput.trim().toLowerCase(),
     );
     setDestinationData(result);
     setSubmitted(true);
