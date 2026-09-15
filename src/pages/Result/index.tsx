@@ -17,13 +17,16 @@ const Result = () => {
       <DestinationCard destination={destination} />
       <p>Checkout more destinations!</p>
       <div className="grid">
-        {destinations.slice(0, 4).map((item) => (
-          <DestinationCard
-            key={item.id}
-            destination={item}
-            showViewMore={true}
-          />
-        ))}
+        {destinations
+          .filter((item) => item.id.toString() !== id)
+          .slice(0, 4)
+          .map((item) => (
+            <DestinationCard
+              key={item.id}
+              destination={item}
+              showViewMore={true}
+            />
+          ))}
       </div>
       <button className="button" onClick={() => window.history.back()}>
         Back
