@@ -1,6 +1,6 @@
 import DestinationCard from "../../components/DestinationCard";
 import destinations from "../../data/destinations";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const Result = () => {
   const { id } = useParams<{ id: string }>();
@@ -19,7 +19,11 @@ const Result = () => {
     <div className="result-page">
       <h1>Results</h1>
       <DestinationCard destination={destination} />
-      <p>Checkout more destinations!</p>
+      <p>Checkout all destinations!</p>
+      <Link to="/destinations" className="button">
+        See all destinations
+      </Link>
+      <h2>More Recommendations</h2>
       <div className="grid">
         {destinations
           .filter((item) => item.id.toString() !== id)
