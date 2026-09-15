@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import type { Destination } from "../types/Destination";
 
 type Props = {
@@ -27,9 +28,9 @@ const DestinationCard = (props: Props) => {
       />
       {props.showViewMore && (
         <div className="view-more">
-          <a href={`/result/${props.destination.id}`}>
+          <Link to={`/result/${props.destination.id}`}>
             <button className="button">View more</button>
-          </a>
+          </Link>
         </div>
       )}
     </div>

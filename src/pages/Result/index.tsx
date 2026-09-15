@@ -7,11 +7,15 @@ const Result = () => {
   const destination = destinations.find(
     (destination) => destination.id.toString() === id,
   );
-  if (!destination) {
-    return <p>Destination not found.</p>;
-  }
 
-  return (
+  return !destination ? (
+    <div>
+      <h1>Destination not found.</h1>
+      <button className="button" onClick={() => window.history.back()}>
+        Back
+      </button>
+    </div>
+  ) : (
     <div className="result-page">
       <h1>Results</h1>
       <DestinationCard destination={destination} />
