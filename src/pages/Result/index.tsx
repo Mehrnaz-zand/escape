@@ -18,24 +18,12 @@ const Result = () => {
   ) : (
     <div className="result-page">
       <h1>Results</h1>
-      <DestinationCard destination={destination} />
+      <DestinationCard destination={destination} showViewMore={false} />
       <p>Checkout all destinations!</p>
       <Link to="/destinations" className="button">
         See all destinations
       </Link>
-      <h2>More Recommendations</h2>
-      <div className="grid">
-        {destinations
-          .filter((item) => item.id.toString() !== id)
-          .slice(0, 4)
-          .map((item) => (
-            <DestinationCard
-              key={item.id}
-              destination={item}
-              showViewMore={true}
-            />
-          ))}
-      </div>
+      <br />
       <button className="button" onClick={() => window.history.back()}>
         Back
       </button>

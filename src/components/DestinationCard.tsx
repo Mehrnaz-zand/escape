@@ -5,6 +5,7 @@ type Props = {
   destination: Destination;
   showViewMore?: boolean;
 };
+
 const DestinationCard = (props: Props) => {
   return (
     <div className="destination-card">
@@ -26,13 +27,13 @@ const DestinationCard = (props: Props) => {
         alt={props.destination.name}
         className="img"
       />
-      {props.showViewMore && (
-        <div className="view-more">
+      <div className="view-more">
+        {props.showViewMore && (
           <Link to={`/result/${props.destination.id}`}>
             <button className="button">View more</button>
           </Link>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 };

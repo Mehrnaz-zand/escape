@@ -17,7 +17,6 @@ const Home = () => {
             <DestinationCard destination={destination} showViewMore={true} />
           ))}
         </div>
-
         <hr />
         <Footer />
       </section>
