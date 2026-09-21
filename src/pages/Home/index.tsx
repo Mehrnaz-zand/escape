@@ -1,4 +1,3 @@
-import Footer from "../../components/Footer";
 import Searchbar from "../../components/Search";
 import DestinationCard from "../../components/DestinationCard";
 import destinations from "../../data/destinations";

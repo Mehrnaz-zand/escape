@@ -5,6 +5,7 @@ import PageNotFound from "./pages/PageNotFound";
 import Destinations from "./pages/Destinations";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer";
+import About from "./pages/About";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/destinations" element={<Destinations />} />
         <Route path="/result/:id" element={<Result />} />
+        <Route path="/about" element={<About />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Footer />

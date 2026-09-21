@@ -8,6 +8,11 @@
     align-items: center;
   }
 
+  .header-menu {
+    display: flex;
+    gap: 20px;
+  }
+
   a,
   a:visited {
     color: inherit;
