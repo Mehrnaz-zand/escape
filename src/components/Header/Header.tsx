@@ -9,6 +9,7 @@ const Header = () => {
           <Link to="/">Escape</Link>
         </h1>
         <div className="header-menu">
+          <Link to="/">Home</Link>
           <Link to="/destinations">All destinations</Link>
           <Link to="/about">About</Link>
         </div>
