@@ -1,7 +1,8 @@
 import { useState } from "react";
-import destinations from "../data/destinations";
-import type { Destination } from "../types/Destination";
-import DestinationCard from "./DestinationCard";
+import destinations from "../../data/destinations";
+import type { Destination } from "../../types/Destination";
+import DestinationCard from "../DestinationCard/DestinationCard";
+import "./searchbar.scss";
 
 const destinationList = destinations;
 

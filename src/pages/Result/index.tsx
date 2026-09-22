@@ -1,4 +1,4 @@
-import DestinationCard from "../../components/DestinationCard";
+import DestinationCard from "../../components/DestinationCard/DestinationCard";
 import destinations from "../../data/destinations";
 import { Link, useParams } from "react-router-dom";
 
@@ -9,7 +9,7 @@ const Result = () => {
   );
 
   return !destination ? (
-    <div>
+    <div className="container">
       <h1>Destination not found.</h1>
       <button className="button" onClick={() => window.history.back()}>
         Back

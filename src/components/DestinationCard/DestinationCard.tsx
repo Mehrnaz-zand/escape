@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import type { Destination } from "../types/Destination";
+import type { Destination } from "../../types/Destination";
+import "./destinationCard.scss";
 
 type Props = {
   destination: Destination;
