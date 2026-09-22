@@ -1,6 +1,6 @@
 import { useState } from "react";
-import DestinationCard from "../../components/DestinationCard";
-import Searchbar from "../../components/Search";
+import DestinationCard from "../../components/DestinationCard/DestinationCard";
+import Searchbar from "../../components/Searchbar/Searchbar";
 import destinations from "../../data/destinations";
 import "./destinations.scss";
 
@@ -31,37 +31,39 @@ const Destinations = () => {
   };
 
   return (
-    <div className="destinations">
-      <h1>All Destinations</h1>
-      <Searchbar />
-      <div className="filters">
-        <input
-          value="Sort by Price"
-          type="button"
-          onClick={() => sortByPrice()}
-        />
-        <input
-          value="Sort by Name"
-          type="button"
-          onClick={() => sortByName()}
-        />
-        <span>Dog Friendly:</span>
-        <input
-          value="Dog Friendly"
-          type="checkbox"
-          onChange={(e) => filterDogFriendly(e.target.checked)}
-        />
+    <div className="container">
+      <div className="destinations">
+        <h1>All Destinations</h1>
+        <Searchbar />
+        <div className="filters">
+          <input
+            value="Sort by Price"
+            type="button"
+            onClick={() => sortByPrice()}
+          />
+          <input
+            value="Sort by Name"
+            type="button"
+            onClick={() => sortByName()}
+          />
+          <span>Dog Friendly:</span>
+          <input
+            value="Dog Friendly"
+            type="checkbox"
+            onChange={(e) => filterDogFriendly(e.target.checked)}
+          />
+        </div>
+        {destinationsList.map((destination) => (
+          <DestinationCard
+            key={destination.id}
+            destination={destination}
+            showViewMore={true}
+          />
+        ))}
+        <button className="button" onClick={() => window.history.back()}>
+          Back
+        </button>
       </div>
-      {destinationsList.map((destination) => (
-        <DestinationCard
-          key={destination.id}
-          destination={destination}
-          showViewMore={true}
-        />
-      ))}
-      <button className="button" onClick={() => window.history.back()}>
-        Back
-      </button>
     </div>
   );
 };

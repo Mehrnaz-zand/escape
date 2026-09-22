@@ -1,10 +1,11 @@
-import Searchbar from "../../components/Search";
-import DestinationCard from "../../components/DestinationCard";
+import "./home.scss";
+import Searchbar from "../../components/Searchbar/Searchbar";
+import DestinationCard from "../../components/DestinationCard/DestinationCard";
 import destinations from "../../data/destinations";
 
 const Home = () => {
   return (
-    <>
+    <div className="container">
       <section>
         <Searchbar />
         <div className="grid">
@@ -14,7 +15,7 @@ const Home = () => {
         </div>
         <hr />
       </section>
-    </>
+    </div>
   );
 };
 
