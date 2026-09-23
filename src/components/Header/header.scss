@@ -1,5 +1,8 @@
+@use "../../styles/colors" as colors;
+
 .header {
   padding: 0 10px;
+  background-color: colors.$soft-cream;
   position: fixed;
   top: 0;
   left: 0;

@@ -1,0 +1,13 @@
+@use "../../styles/colors" as colors;
+
+.hero {
+  background-image: url("../../assets/hero-home.png");
+  background-size: cover;
+  padding: 50px 20px;
+
+  .hero-content {
+    p {
+      color: colors.$deep-green;
+    }
+  }
+}

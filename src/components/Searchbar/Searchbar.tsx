@@ -24,7 +24,6 @@ const Searchbar = () => {
 
   return (
     <div className="search-bar">
-      <p>Where do you want to escape?</p>
       <form
         onSubmit={(e) => {
           e.preventDefault();
