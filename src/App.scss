@@ -1,14 +1,27 @@
-.container {
-  margin: 50px auto;
+@use "./styles/colors" as colors;
+
+body {
+  font-family: clean sans-serif;
+  background-color: colors.$soft-cream;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: elegant serif;
 }
 
 .button {
   margin: 10px;
-  padding: 5px 15px;
-  font-size: 16px;
-  background-color: #9b226c;
-  color: white;
+  padding: 10px 25px;
+  font-size: 12px;
+  background-color: colors.$deep-green;
+  color: colors.$soft-cream;
   border: none;
-  border-radius: 4px;
+  border-radius: 10px;
   cursor: pointer;
 }
+
+.container {
+  margin: 50px auto;
+}
+
+
