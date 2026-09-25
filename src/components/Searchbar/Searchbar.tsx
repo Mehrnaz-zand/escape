@@ -23,7 +23,7 @@ const Searchbar = () => {
   };
 
   return (
-    <div className="search-bar">
+    <div className="searchbar">
       <form
         onSubmit={(e) => {
           e.preventDefault();
