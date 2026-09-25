@@ -1,7 +1,7 @@
 @use "../../styles/colors" as colors;
 
 .header {
-  padding: 0 10px;
+  padding: 0 100px 0 60px;
   background-color: colors.$soft-cream;
   position: fixed;
   top: 0;
@@ -21,7 +21,7 @@
 
     .header-menu {
       display: flex;
-      gap: 20px;
+      gap: 15px;
     }
 
     a:hover {

@@ -2,10 +2,15 @@
 
 body {
   font-family: clean sans-serif;
-  background-color: colors.$warm-sand;
+  background-color: colors.$soft-cream;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: elegant serif;
 }
 
@@ -21,8 +26,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .container {
-  margin: 50px auto;
+  margin: 10px;
   margin-top: 84px;
 }
-
-

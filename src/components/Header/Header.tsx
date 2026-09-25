@@ -4,7 +4,7 @@ import Logo from "../../assets/logo.png";
 
 const Header = () => {
   return (
-    <header className="header">
+    <div className="header">
       <div className="header-container">
         <Link to="/">
           <img src={Logo} alt="Escape logo" className="logo" />
@@ -15,7 +15,7 @@ const Header = () => {
           <Link to="/about">About</Link>
         </div>
       </div>
-    </header>
+    </div>
   );
 };
 

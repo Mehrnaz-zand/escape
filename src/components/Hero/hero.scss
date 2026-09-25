@@ -1,13 +1,28 @@
 @use "../../styles/colors" as colors;
 
 .hero {
+  text-align: left;
   background-image: url("../../assets/hero-home.png");
-  background-size: cover;
-  padding: 50px 20px;
+  background-position: center;
+  padding: 40px;
+  min-height: 330px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
   .hero-content {
+    max-width: 40%;
+
     p {
+      text-transform: uppercase;
+      color: colors.$light-green;
+    }
+
+    h4 {
+      font-family: clean sans-serif;
+      line-height: 1.5;
       color: colors.$deep-green;
+      text-align: left;
     }
   }
 }

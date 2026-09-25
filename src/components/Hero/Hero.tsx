@@ -1,21 +1,17 @@
 import "./hero.scss";
-import Searchbar from "../Searchbar/Searchbar";
 
 const Hero = () => {
   return (
-    <div className="container">
-      <section className="hero">
-        <div className="hero-content">
-          <h1>Find your next escape</h1>
-
-          <p>
-            Discover beautiful destinations, compare prices,
-            <br />
-            check dog-friendly options and plan your next trip with less effort.
-          </p>
-        </div>
-        <Searchbar />
-      </section>
+    <div className="hero">
+      <div className="hero-content">
+        <p> a brighter world awaits</p>
+        <h1>Find your next escape</h1>
+        <h4>
+          Discover beautiful destinations, compare prices,
+          <br />
+          check dog-friendly options and plan your next trip with less effort.
+        </h4>
+      </div>
     </div>
   );
 };
