@@ -10,30 +10,37 @@ type Props = {
 const DestinationCard = (props: Props) => {
   return (
     <div className="destination-card">
-      <h2>{props.destination.name}</h2>
-      <p>{props.destination.description}</p>
-      <p>
-        <span>Dog friendly: </span>
-        {props.destination.dogFriendly ? (
-          <span>Yes 🎉🐕</span>
-        ) : (
-          <span> No 😢</span>
-        )}
-      </p>
-      <p>
-        <strong>From ${props.destination.price}</strong>
-      </p>
       <img
         src={props.destination.image}
         alt={props.destination.name}
         className="img"
       />
-      <div className="view-more">
-        {props.showViewMore && (
-          <Link to={`/result/${props.destination.id}`}>
-            <button className="button">View more</button>
-          </Link>
-        )}
+      <div className="destination-titles">
+        <h3>{props.destination.country}</h3>
+        <h2>{props.destination.name}</h2>
+      </div>
+
+      <div className="destination-description">
+        <p>{props.destination.description}</p>
+        <p>
+          <span>Dog friendly: </span>
+          {props.destination.dogFriendly ? (
+            <span>Yes 🎉🐕</span>
+          ) : (
+            <span> No 😢</span>
+          )}
+        </p>
+        <p>
+          <strong>From ${props.destination.price}</strong>
+        </p>
+
+        <div className="view-more">
+          {props.showViewMore && (
+            <Link to={`/result/${props.destination.id}`}>
+              <button className="button">View more</button>
+            </Link>
+          )}
+        </div>
       </div>
     </div>
   );
