@@ -1,15 +1,35 @@
+@use "../../styles/colors" as colors;
+
 .destination-card {
-  background-color: beige;
-  padding: 20px;
-  margin: 20px auto;
+  background-color: white;
+  color: colors.$deep-green;
+  text-align: center;
   border-radius: 80px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: auto;
-  text-align: center;
+  text-align: left;
+
+  .destination-titles {
+    padding: 10px 20px;
+
+    h2 {
+      margin: 0;
+    }
+    h3 {
+      color: colors.$light-green;
+      text-transform: uppercase;
+      font-weight: 100;
+      margin: 0;
+    }
+  }
+
+  .destination-description {
+    padding: 10px 20px;
+  }
 
   .img {
-    width: 25%;
+    width: 100%;
     height: auto;
-    border-radius: 20px;
+    border-radius: 20px 20px 0 0;
   }
 }
