@@ -9,8 +9,15 @@
   width: auto;
   text-align: left;
 
-  .destination-titles {
+  .card-image {
+    width: 100%;
+    height: auto;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .card-heading {
     padding: 10px 20px;
+    padding-bottom: 0;
 
     h2 {
       margin: 0;
@@ -23,13 +30,28 @@
     }
   }
 
-  .destination-description {
-    padding: 10px 20px;
-  }
+  .card-body {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    padding-top: 0;
 
-  .img {
-    width: 100%;
-    height: auto;
-    border-radius: 20px 20px 0 0;
+    p {
+      margin: 5px;
+    }
+    .button {
+      background-color: colors.$light-green;
+      color: colors.$soft-cream;
+      font-size: 20px;
+      border: none;
+      padding: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    & button:hover {
+      background-color: colors.$deep-green;
+      color: colors.$soft-cream;
+    }
   }
 }
