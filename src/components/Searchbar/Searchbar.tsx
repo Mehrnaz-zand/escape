@@ -30,13 +30,15 @@ const Searchbar = () => {
           handleSearch();
         }}
       >
-        <input
-          className="input"
-          type="text"
-          placeholder="Search destinations..."
-          onChange={(e) => setSearchInput(e.target.value)}
-        />
-        <button className="button">Search</button>
+        <div className="search-field">
+          <input
+            className="input"
+            type="text"
+            placeholder="Search destinations..."
+            onChange={(e) => setSearchInput(e.target.value)}
+          />
+          <button className="button">Search</button>
+        </div>
         {destinationData ? (
           <div className="destination-results">
             <DestinationCard
