@@ -1,15 +1,57 @@
+@use "../../styles/colors" as colors;
+
 .destination-card {
-  background-color: beige;
-  padding: 20px;
-  margin: 20px auto;
+  background-color: white;
+  color: colors.$deep-green;
+  text-align: center;
   border-radius: 80px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: auto;
-  text-align: center;
+  text-align: left;
 
-  .img {
-    width: 25%;
+  .card-image {
+    width: 100%;
     height: auto;
-    border-radius: 20px;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .card-heading {
+    padding: 10px 20px;
+    padding-bottom: 0;
+
+    h2 {
+      margin: 0;
+    }
+    h3 {
+      color: colors.$light-green;
+      text-transform: uppercase;
+      font-weight: 100;
+      margin: 0;
+    }
+  }
+
+  .card-body {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    padding-top: 0;
+
+    p {
+      margin: 5px;
+    }
+    .button {
+      background-color: colors.$light-green;
+      color: colors.$soft-cream;
+      font-size: 20px;
+      border: none;
+      padding: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    & button:hover {
+      background-color: colors.$deep-green;
+      color: colors.$soft-cream;
+    }
   }
 }

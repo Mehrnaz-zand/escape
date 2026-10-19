@@ -1,6 +1,31 @@
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  padding: 20px;
+@use "../../styles/colors" as colors;
+
+.home {
+  .popular-destinations {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h2 {
+      font-size: 1.5rem;
+      color: colors.$deep-green;
+    }
+
+    .button {
+      background: none;
+      color: colors.$deep-green;
+      cursor: pointer;
+    }
+
+    & button:hover {
+      color: colors.$light-green;
+    }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
 }
