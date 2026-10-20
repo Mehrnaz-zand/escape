@@ -8,7 +8,7 @@ const destinations: Destination[] = [
     description:
       "A romantic city full of cafés, museums, shopping and beautiful architecture.",
     price: 700,
-    dogFriendly: false,
+    dogFriendly: true,
     image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34",
   },
 
@@ -19,7 +19,7 @@ const destinations: Destination[] = [
     description:
       "Canals, museums, stylish cafés and lively neighborhoods for an easy weekend escape.",
     price: 650,
-    dogFriendly: false,
+    dogFriendly: true,
     image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017",
   },
 
