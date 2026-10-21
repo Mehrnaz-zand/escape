@@ -28,6 +28,7 @@ h6 {
 .container {
   margin: 10px;
   margin-top: 120px;
+  padding: 0 60px;
 }
 
 hr {
@@ -45,3 +46,9 @@ hr {
   margin-right: 8px;
   color: colors.$deep-green;
 }
+
+.back-link {
+  text-align: left;
+  margin-bottom: 20px;
+}
+

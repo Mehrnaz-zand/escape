@@ -5,6 +5,7 @@ import "./result.scss";
 import DogFriendlyIcon from "../../assets/icons/dog-paw.svg";
 import LocationIcon from "../../assets/icons/location.svg";
 import tagIcon from "../../assets/icons/tag.svg";
+import arrowLeftIcon from "../../assets/icons/arrow-left.svg";
 
 const Result = () => {
   const { id } = useParams<{ id: string }>();
@@ -14,12 +15,15 @@ const Result = () => {
 
   return (
     <div className="container">
+      <div className="back-link">
+        <Link to="/">
+          <img src={arrowLeftIcon} className="icon" alt="Back" />
+          Back to home
+        </Link>
+      </div>
       {!destination ? (
         <div className="container">
           <h1>Destination not found.</h1>
-          <button className="button" onClick={() => window.history.back()}>
-            Back
-          </button>
         </div>
       ) : (
         <div className="result-page">
@@ -50,17 +54,10 @@ const Result = () => {
               <p>{destination.description}</p>
             </div>
           </div>
-          <p>Checkout all destinations!</p>
-          <Link to="/destinations" className="button">
-            See all destinations
-          </Link>
+
           <br />
-          <button className="button" onClick={() => window.history.back()}>
-            Back
-          </button>
         </div>
       )}
-      ;
     </div>
   );
 };

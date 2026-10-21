@@ -1,0 +1,35 @@
+@use "../../styles/colors" as colors;
+
+.result-page {
+  .result-section {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    .result-image {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+
+      border-radius: 10px;
+    }
+
+    .result-text {
+      background-color: white;
+      text-align: left;
+      border-radius: 10px;
+      box-sizing: border-box;
+      max-width: 50%;
+      padding: 20px;
+
+      h1 {
+        margin-bottom: 10px;
+      }
+
+      p {
+        color: colors.$deep-green;
+      }
+    }
+  }
+}
