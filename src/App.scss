@@ -27,12 +27,28 @@ h6 {
 
 .container {
   margin: 10px;
-  margin-top: 84px;
+  margin-top: 120px;
+  padding: 0 60px;
 }
 
 hr {
   border: none;
   height: 1px;
+  width: 100%;
   background-color: colors.$light-green;
-  margin: 20px 0;
+  margin-bottom: 20px;
 }
+
+.icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: top;
+  margin-right: 8px;
+  color: colors.$deep-green;
+}
+
+.back-link {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
