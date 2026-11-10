@@ -58,6 +58,15 @@ const Result = () => {
           <br />
         </div>
       )}
+      <hr />
+      <div className="popular-destinations-section">
+        <h2>Popular Destinations</h2>
+        <div className="popular-destinations grid">
+          {destinations.slice(0, 4).map((destination) => (
+            <DestinationCard destination={destination} showViewMore={true} />
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

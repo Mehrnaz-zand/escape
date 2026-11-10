@@ -15,7 +15,7 @@ const Home = () => {
         <button className="button">Brows all destination →</button>
       </div>
       <div className="grid">
-        {destinations.slice(0, 3).map((destination) => (
+        {destinations.slice(0, 4).map((destination) => (
           <DestinationCard destination={destination} showViewMore={true} />
         ))}
       </div>
