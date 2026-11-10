@@ -1,7 +1,6 @@
 @use "../../styles/colors" as colors;
 
 .header {
-  padding: 0 100px 0 60px;
   background-color: colors.$soft-cream;
   position: fixed;
   top: 0;
@@ -10,6 +9,7 @@
   z-index: 10;
 
   .header-container {
+    padding: 0 100px 0 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,5 +33,9 @@
       color: inherit;
       text-decoration: none;
     }
+  }
+
+  hr {
+    margin-top: none;
   }
 }
