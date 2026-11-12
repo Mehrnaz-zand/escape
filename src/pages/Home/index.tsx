@@ -1,8 +1,7 @@
 import "./home.scss";
-import DestinationCard from "../../components/DestinationCard/DestinationCard";
-import destinations from "../../data/destinations";
 import Hero from "../../components/Hero/Hero";
 import Searchbar from "../../components/Searchbar/Searchbar";
+import PopularDestinations from "../../components/PopularDestinations/PopularDestinations";
 
 const Home = () => {
   return (
@@ -10,15 +9,7 @@ const Home = () => {
       <Hero />
       <Searchbar />
       <hr />
-      <div className="popular-destinations">
-        <h2>Popular Destinations</h2>
-        <button className="button">Brows all destination →</button>
-      </div>
-      <div className="grid">
-        {destinations.slice(0, 4).map((destination) => (
-          <DestinationCard destination={destination} showViewMore={true} />
-        ))}
-      </div>
+      <PopularDestinations />
     </div>
   );
 };

@@ -4,6 +4,23 @@
   text-align: left;
 
   h2 {
+    font-size: 1.5rem;
     margin-bottom: 0;
+  }
+
+  .popular-destinations-cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .button {
+      background: none;
+      color: colors.$deep-green;
+      cursor: pointer;
+    }
+
+    & button:hover {
+      color: colors.$light-green;
+    }
   }
 }
