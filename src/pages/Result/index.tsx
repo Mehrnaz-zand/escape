@@ -1,4 +1,3 @@
-import DestinationCard from "../../components/DestinationCard/DestinationCard";
 import destinations from "../../data/destinations";
 import { Link, useParams } from "react-router-dom";
 import "./result.scss";
@@ -6,6 +5,7 @@ import DogFriendlyIcon from "../../assets/icons/dog-paw.svg";
 import LocationIcon from "../../assets/icons/location.svg";
 import tagIcon from "../../assets/icons/tag.svg";
 import arrowLeftIcon from "../../assets/icons/arrow-left.svg";
+import PopularDestinations from "../../components/PopularDestinations/PopularDestinations";
 
 const Result = () => {
   const { id } = useParams<{ id: string }>();
@@ -59,14 +59,7 @@ const Result = () => {
         </div>
       )}
       <hr />
-      <div className="popular-destinations-section">
-        <h2>Popular Destinations</h2>
-        <div className="popular-destinations grid">
-          {destinations.slice(0, 4).map((destination) => (
-            <DestinationCard destination={destination} showViewMore={true} />
-          ))}
-        </div>
-      </div>
+      <PopularDestinations />
     </div>
   );
 };
