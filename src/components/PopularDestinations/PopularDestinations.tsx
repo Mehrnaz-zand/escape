@@ -6,7 +6,9 @@ const popularDestinations = () => {
   return (
     <div className="popular-destinations">
       <h2>Popular Destinations</h2>
-      <div className="popular-destinations grid">
+      <button className="button">Brows all destination →</button>
+
+      <div className="popular-destinations-cards grid">
         {destinations.slice(0, 4).map((destination) => (
           <DestinationCard destination={destination} showViewMore={true} />
         ))}
